@@ -30,7 +30,7 @@
 .hole-film{margin:0!important;border:0!important;border-top:1px solid var(--line)!important;background:#07182f;color:white}.hole-film summary{padding:14px 16px!important;color:var(--gold);list-style:none}.hole-film summary:after{content:" +";float:right}.hole-film[open] summary:after{content:" –"}.hole-film>div{padding:0 12px 13px}.hole-film iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#020914}.hole-film p{margin:9px 0 0;color:#d3deea;font-size:10px;line-height:1.35}.hole-film p b{display:block;color:var(--gold);font-size:8px;letter-spacing:.14em;margin-bottom:3px}
 
 /* Short data definitions keep every percentage legible at a glance. */
-.scoregrid small{display:block;max-width:190px;margin-top:7px;color:#aabbd0;font-size:9px;line-height:1.35}.scoregrid .gold small{color:#273954}.table-key,.chart-key{margin:0;color:var(--muted);font-size:10px;line-height:1.45}.table-key{padding:13px 22px;border-bottom:1px solid var(--line)}.chart-key{padding-bottom:4px;color:#aabbd0}.table-key b,.chart-key b{color:var(--blue);font-size:8px;letter-spacing:.12em}.chart-key b{display:block;color:var(--gold);margin-bottom:3px}
+.scoregrid small{display:block;max-width:190px;margin-top:7px;color:#aabbd0;font-size:9px;line-height:1.35}.scoregrid .gold small{color:#273954}.table-key,.chart-key{margin:0;color:var(--muted);font-size:10px;line-height:1.45}.table-key{padding:16px 22px;border-bottom:1px solid var(--line);display:grid;gap:5px}.table-key span{color:var(--ink);font-weight:800}.table-key small{font-size:9px;line-height:1.5}.chart-key{padding-bottom:4px;color:#aabbd0}.table-key b,.chart-key b{color:var(--blue);font-size:8px;letter-spacing:.12em}.chart-key b{display:block;color:var(--gold);margin-bottom:3px}.player-metric small,.player-row em small{display:none}
 .challenge-grid article.lock-bet{position:relative;background:linear-gradient(135deg,#0e56a6 0%,#07182f 72%);border:3px solid var(--gold);box-shadow:0 12px 30px rgba(7,24,47,.22)}.challenge-grid article.lock-bet>span{display:inline-block;padding:6px 8px;background:var(--gold);color:var(--navy);font-size:9px}.challenge-grid article.lock-bet .edge{border-color:rgba(255,255,255,.28)}.challenge-grid article.lock-bet:after{content:"LOCK";position:absolute;right:13px;top:13px;color:rgba(255,255,255,.13);font:46px/1 var(--font-display);transform:rotate(-8deg)}
 .rally-call{display:flex;align-items:center;gap:18px;width:max-content;max-width:100%;margin:0 0 28px;padding:15px 18px;border:1px solid rgba(255,255,255,.35);background:rgba(7,24,47,.76);backdrop-filter:blur(4px)}.rally-call span{display:flex;align-items:center;gap:8px}.rally-call b{font:46px/1 var(--font-display);color:var(--gold)}.rally-call small{max-width:54px;font-size:9px;font-weight:900;line-height:1.1;text-transform:uppercase;letter-spacing:.08em}.rally-call i{font-style:normal;color:#9fb0c3;font-size:10px;font-weight:900;text-transform:uppercase}.rally-call strong{padding-left:18px;border-left:1px solid rgba(255,255,255,.28);font:24px/1.05 var(--font-display);text-transform:uppercase}.rally-mantra{margin-top:32px;padding:24px;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;gap:22px;color:var(--gold);font:clamp(32px,5vw,58px)/1 var(--font-display);letter-spacing:.025em;text-align:center}.rally-mantra i{width:9px;height:9px;background:white;border-radius:50%}.tactical-mantra{margin-top:18px;font-size:19px;color:#c6d8eb}
 @media(max-width:620px){.rally-call{width:100%;gap:10px;padding:12px}.rally-call b{font-size:34px}.rally-call strong{font-size:17px;padding-left:10px}.rally-mantra{flex-wrap:wrap;font-size:35px}.rally-mantra i{display:none}}
@@ -85,6 +85,14 @@
   .player-row em{font-size:13px}
   .table-key,.chart-key{font-size:13px}
   .table-key b,.chart-key b{font-size:10px}
+  .table-key{gap:8px;padding:18px 16px}
+  .table-key span{font-size:15px;line-height:1.45}
+  .table-key small{font-size:13px;line-height:1.5}
+  .player-row{grid-template-columns:1fr 1fr 1fr;gap:15px 10px}
+  .player-row>b{grid-column:1/-1}
+  .player-metric{display:grid;gap:4px}
+  .player-metric small,.player-row em small{display:block;color:var(--muted);font:10px/1.2 var(--font-body);font-style:normal;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+  .player-row em{grid-column:1/-1;display:grid;gap:4px;padding-top:4px}
   .evidence-grid span,.evidence-grid article>b{font-size:10px}
   .evidence-grid p,.red-intro>p:not(.eyebrow),.challenge-title p,.challenge-grid p{font-size:14px}
   .selection-order b,.history-conclusion span,.challenge-grid>article>span{font-size:10px}
