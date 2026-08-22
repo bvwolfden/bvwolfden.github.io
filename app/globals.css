@@ -34,3 +34,73 @@
 .challenge-grid article.lock-bet{position:relative;background:linear-gradient(135deg,#0e56a6 0%,#07182f 72%);border:3px solid var(--gold);box-shadow:0 12px 30px rgba(7,24,47,.22)}.challenge-grid article.lock-bet>span{display:inline-block;padding:6px 8px;background:var(--gold);color:var(--navy);font-size:9px}.challenge-grid article.lock-bet .edge{border-color:rgba(255,255,255,.28)}.challenge-grid article.lock-bet:after{content:"LOCK";position:absolute;right:13px;top:13px;color:rgba(255,255,255,.13);font:46px/1 var(--font-display);transform:rotate(-8deg)}
 .rally-call{display:flex;align-items:center;gap:18px;width:max-content;max-width:100%;margin:0 0 28px;padding:15px 18px;border:1px solid rgba(255,255,255,.35);background:rgba(7,24,47,.76);backdrop-filter:blur(4px)}.rally-call span{display:flex;align-items:center;gap:8px}.rally-call b{font:46px/1 var(--font-display);color:var(--gold)}.rally-call small{max-width:54px;font-size:9px;font-weight:900;line-height:1.1;text-transform:uppercase;letter-spacing:.08em}.rally-call i{font-style:normal;color:#9fb0c3;font-size:10px;font-weight:900;text-transform:uppercase}.rally-call strong{padding-left:18px;border-left:1px solid rgba(255,255,255,.28);font:24px/1.05 var(--font-display);text-transform:uppercase}.rally-mantra{margin-top:32px;padding:24px;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;gap:22px;color:var(--gold);font:clamp(32px,5vw,58px)/1 var(--font-display);letter-spacing:.025em;text-align:center}.rally-mantra i{width:9px;height:9px;background:white;border-radius:50%}.tactical-mantra{margin-top:18px;font-size:19px;color:#c6d8eb}
 @media(max-width:620px){.rally-call{width:100%;gap:10px;padding:12px}.rally-call b{font-size:34px}.rally-call strong{font-size:17px;padding-left:10px}.rally-mantra{flex-wrap:wrap;font-size:35px}.rally-mantra i{display:none}}
+
+/* Mobile readability: scale supporting copy and labels ~27% without changing display headlines. */
+@media(max-width:620px){
+  body{font-size:20px}
+  .brand,.eyebrow,.button{font-size:15px}
+  .lede{font-size:19px}
+  .scoregrid span,.day,.club-call b{font-size:13px}
+  .scoregrid small{font-size:12px}
+  .format-grid strong{font-size:16px}
+  .format-grid p{font-size:18px}
+  .points{font-size:14px}
+  .rule-strip{font-size:16px}
+  .bar-label small{font-size:13px}
+  .bar-track em{font-size:15px}
+  .rotation-card span{font-size:13px}
+  .rotation-note{font-size:15px}
+  .course-hero p{font-size:14px}
+  .course-hero span{font-size:16px}
+  .course-hero a{font-size:13px}
+  .target,.pin,.tee-label{font-size:11px}
+  .map-note{font-size:10px}
+  .map-legend{font-size:9px}
+  .read-origin,.break-label,.slope-label,.tier-target,.ridge-label{font-size:10px}
+  .weapon-top small{font-size:13px}
+  .setup{font-size:16px}
+  .plan-row span{font-size:11px}
+  .plan-row p{font-size:15px}
+  .club-call{font-size:14px}
+  .weapon summary{font-size:13px}
+  .pressure p{font-size:14px}
+  .pressure b{font-size:10px}
+  .photo-credit{font-size:13px}
+  .hole-film p{font-size:13px}
+  .hole-film p b{font-size:10px}
+  .talk-grid span,.bet-grid span,.quick-grid span{font-size:11px}
+  .talk-grid p,.singles-grid p,.bet-grid p{font-size:15px}
+  .opponent-board span{font-size:13px}
+  .opponent-board b{font-size:15px}
+  .scoreboard-rule{font-size:15px}
+  .bet-grid b{font-size:14px}
+  .bet-card ol{font-size:15px}
+  .quick-grid b{font-size:16px}
+  .footer-grid p,.footer-grid a{font-size:14px}
+  .analytics-lead span,.history-big span,.history-split span{font-size:11px}
+  .analytics-lead small{font-size:13px}
+  .analytics-thesis span,.history-big p{font-size:15px}
+  .history-split p{font-size:13px}
+  .player-row{font-size:15px}
+  .player-row em{font-size:13px}
+  .table-key,.chart-key{font-size:13px}
+  .table-key b,.chart-key b{font-size:10px}
+  .evidence-grid span,.evidence-grid article>b{font-size:10px}
+  .evidence-grid p,.red-intro>p:not(.eyebrow),.challenge-title p,.challenge-grid p{font-size:14px}
+  .selection-order b,.history-conclusion span,.challenge-grid>article>span{font-size:10px}
+  .selection-order span,.red-row div b,.red-row em,.course-intel cite,.challenge-grid h3 i{font-size:13px}
+  .red-row div small,.edge small{font-size:9px}
+  .history-conclusion b{font-size:16px}
+  .course-intel blockquote a{font-size:11px}
+  .psyche-principle b{font-size:13px}
+  .psyche-principle span{font-size:16px}
+  .psyche-grid article>span{font-size:11px}
+  .psyche-grid article>b{font-size:13px}
+  .psyche-grid article>p{font-size:14px}
+  .psyche-grid small{font-size:11px}
+  .pressure-ladder span{font-size:10px}
+  .pressure-ladder b{font-size:13px}
+  .rally-call small{font-size:11px}
+  .rally-call i{font-size:13px}
+  .tactical-mantra{font-size:24px}
+}
