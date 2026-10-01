@@ -1,0 +1,124 @@
+/* Shared accessibility and reflow rules; loaded after the original visual theme. */
+:root { --muted: #536278; --green: #267344; --red: #b83d36; }
+body { font-size: 1.125rem; line-height: 1.6; }
+h1, h2, h3, h4 { line-height: 1.12; overflow-wrap: anywhere; }
+p, a, small, span, b, strong, em, cite { overflow-wrap: anywhere; }
+main :where(article, section, div, nav, blockquote), .site-header-inner > * { min-width: 0; }
+.shell { width: min(73.75rem, calc(100% - 2rem)); }
+a, summary, button { touch-action: manipulation; }
+:where(a, summary, button):focus-visible { outline: 3px solid white; outline-offset: 2px; box-shadow: 0 0 0 6px #07182f; }
+.skip-link { position: absolute; left: 1rem; top: .5rem; z-index: 20; padding: .75rem 1rem; background: white; color: var(--navy); transform: translateY(-200%); }
+.skip-link:focus { transform: none; }
+.mobile-menu { display: none; }
+.site-header-inner { flex-direction: row; align-items: center; padding-block: 1rem; }
+.brand { min-height: 48px; font-size: .875rem; letter-spacing: .12em; }
+.brand-mark { flex-shrink: 0; }
+.site-links a { display: flex; align-items: center; min-height: 48px; font-size: 1rem; line-height: 1.4; }
+.button, .course-jumps a, .chapter-bottom a, .course-hero a, .course-intel blockquote a { min-height: 48px; padding: .875rem 1rem; font-size: 1rem; line-height: 1.4; }
+.weapon summary { min-height: 48px; font-size: .875rem; line-height: 1.5; }
+.playbook-home .hero-content { padding-block: clamp(2rem, 5vw, 4rem); }
+.playbook-home .hero h1 { font-size: clamp(2.5rem, 5.5vw, 5rem); }
+.lede { font-size: 1.125rem; }
+.chapter-card p, .course-index-intro > p:last-child { font-size: 1.125rem; }
+.eyebrow, .day, .points, .scoregrid span, .plan-row span, .club-call b,
+.rotation-card span, .course-hero p, .talk-grid span, .bet-grid span, .quick-grid span,
+.analytics-lead span, .history-big span, .history-split span, .table-key b, .chart-key b,
+.evidence-grid span, .evidence-grid article > b, .selection-order b, .history-conclusion span,
+.challenge-grid > article > span, .challenge-grid article.lock-bet > span,
+.psyche-principle b, .psyche-grid article > span, .psyche-grid h4, .pressure-ladder span,
+.pressure b, .hole-film p b { font-size: .8125rem; line-height: 1.5; letter-spacing: .08em; }
+.format-grid p, .format-grid strong, .rule-strip, .bar-label small, .rotation-note,
+.course-hero span, .weapon-top small, .setup, .plan-row p, .club-call, .pressure p,
+.photo-credit, .talk-grid p, .opponent-board span, .opponent-board b, .singles-grid p,
+.scoreboard-rule, .bet-grid b, .bet-grid p, .bet-card ol, .quick-grid b,
+.footer-grid p, .footer-grid a, .analytics-lead small, .analytics-thesis span,
+.history-big p, .history-split p, .table-key, .chart-key, .table-key small,
+.player-row em, .evidence-grid p, .red-intro > p:not(.eyebrow), .selection-order span,
+.red-row div b, .red-row em, .course-intel cite, .challenge-title p, .challenge-grid p,
+.psyche-principle span, .psyche-grid article > b, .psyche-grid article > p,
+.psyche-grid small, .pressure-ladder b, .hole-film p, .scoregrid small { font-size: 1rem; line-height: 1.6; }
+.player-row { font-size: 1.125rem; }
+.player-head, .red-row div small, .edge small, .challenge-grid h3 i { font-size: .8125rem; line-height: 1.4; }
+.bar-track { height: 2.75rem; }
+.bar-track i { background: #155da5; }
+.bar-track em { font-size: 1rem; top: .5rem; }
+.setup, .format-grid p, .psyche-grid article > p { min-height: 0; }
+.history-split i { height: .625rem; }
+.quick-section { background: #08467f; }
+.red-row div small { color: #a9322d; }
+.rally-call { flex-wrap: wrap; gap: 1rem; width: fit-content; }
+.rally-call small { max-width: 5rem; font-size: .8125rem; line-height: 1.35; }
+.rally-call i { font-size: .875rem; }
+.rally-call strong { font-size: 1.5rem; line-height: 1.2; }
+.win-chip small { max-width: 5rem; font-size: .875rem; }
+.edge { grid-template-columns: auto minmax(0, 1fr); gap: .5rem .75rem; }
+.course-directory a { grid-template-columns: 1fr; }
+.course-directory small { grid-column: auto; }
+.chapter-heading > a { display: inline-flex; align-items: center; min-height: 48px; font-size: 1rem; }
+.footer-grid a { display: inline-flex; align-items: center; min-height: 48px; }
+
+@media (max-width: 67.999rem) {
+  .site-header-inner { flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; }
+  .desktop-links { display: none; }
+  .mobile-menu { display: block; margin-left: auto; }
+  .mobile-menu summary { display: flex; align-items: center; justify-content: space-between; gap: .75rem; min-height: 48px; padding: .625rem .875rem; border: 1px solid #9fb0c3; border-radius: .25rem; font-size: 1rem; font-weight: 800; cursor: pointer; list-style: none; }
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu[open] { flex-basis: 100%; }
+  .mobile-menu[open] summary { width: fit-content; margin-left: auto; }
+  .mobile-menu .site-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; margin-top: 1rem; }
+  .mobile-menu .site-links a { padding: .75rem 1rem; text-align: left; }
+  .section-heading { grid-template-columns: 1fr; gap: 1.5rem; }
+  .weapon-grid, .format-grid, .talk-grid, .pair-layout, .course-intel, .red-board, .history-score { grid-template-columns: 1fr; }
+  .weapon { display: block; }
+  .tactical-map { height: 245px; min-height: 0; }
+  .course-hero { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .course-hero a { white-space: normal; }
+  .analytics-lead, .evidence-grid, .psyche-grid, .pressure-ladder, .singles-grid, .bet-grid, .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .course-directory { grid-template-columns: 1fr; }
+  .player-head { display: none; }
+  .player-row { grid-template-columns: repeat(auto-fit, minmax(min(100%, 5.5rem), 1fr)); gap: 1rem; padding: 1.25rem; }
+  .player-row > b, .player-row em { grid-column: 1 / -1; }
+  .player-metric { display: grid; gap: .25rem; }
+  .player-metric small, .player-row em small { display: block; color: var(--muted); font: 700 .8125rem/1.4 var(--font-body); }
+  .analytics-thesis, .history-conclusion, .psyche-principle, .rule-strip { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (max-width: 48rem) {
+  .chapter-directory, .challenge-grid, .scoregrid, .analytics-lead, .evidence-grid, .psyche-grid, .pressure-ladder, .singles-grid, .bet-grid, .quick-grid, .history-split { grid-template-columns: 1fr; }
+  .chapter-directory { padding-block: 1.5rem; }
+  .chapter-card { padding: 1.5rem; }
+  .chapter-card h2 { font-size: 1.75rem; }
+  .rally-call { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); width: 100%; padding: 1rem; gap: .75rem; }
+  .rally-call span { flex-wrap: wrap; }
+  .rally-call strong { grid-column: 1 / -1; border-left: 0; border-top: 1px solid #647287; padding: .75rem 0 0; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .win-chip { margin: 0; padding: .5rem 0 0; border: 0; }
+  .button { width: 100%; text-align: center; }
+  .section-heading h2, .quick-section h2, .course-index-intro h2 { font-size: clamp(2rem, 7vw, 3rem); }
+  .chapter-heading h1 { font-size: 2rem; }
+  .section-heading { margin-bottom: 2rem; }
+  .section, .playbook-chapter .section { padding-block: 2rem; }
+  .course-hero { padding: 1.5rem; min-height: 0; }
+  .course-hero h3 { font-size: 2rem; }
+  .course-intel blockquote, .weapon-body, .history-big, .history-split > div, .analytics-lead > div, .red-intro, .red-chart, .rotation-card { padding: 1.5rem; }
+  .bar-row { grid-template-columns: 1fr; gap: .5rem; }
+  .red-row { grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; }
+  .red-row > div { grid-column: 1 / -1; }
+  .scoregrid small { max-width: none; }
+  .scoregrid > div { padding: 1.25rem 1.5rem; border-bottom: 1px solid #29425f; }
+  .history-split > div + div { border-left: 0; border-top: 1px solid #29425f; }
+  .footer-grid { gap: 1.5rem; }
+}
+@media (max-width: 24rem) {
+  .brand { font-size: .75rem; letter-spacing: .06em; }
+  .mobile-menu .site-links { grid-template-columns: 1fr; }
+  .player-row { grid-template-columns: 1fr; }
+  .player-metric { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+  .weapon-top { align-items: flex-start; gap: .75rem; }
+  .hole-number { font-size: 2.75rem; padding-right: .75rem; }
+  .weapon-top h4 { font-size: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+@media print { .site-header, .skip-link, .chapter-bottom { display: none; } }
