@@ -219,7 +219,7 @@ export default function Playbook({ page = 'home' }: { page?: string }) {
   return (
     <>
       <SiteNavigation current={isCourse ? 'courses' : page} />
-      <main id="top" className={page === 'home' ? 'playbook-home' : 'playbook-chapter'}>
+      <main id="top" tabIndex={-1} className={page === 'home' ? 'playbook-home' : 'playbook-chapter'}>
         {page !== 'home' && <header className="chapter-heading shell"><a href="/">Captain’s Playbook</a><h1>{pageTitle(page)}</h1></header>}
         {page === 'home' && <>
           <section className="hero" >
@@ -344,4 +344,3 @@ export default function Playbook({ page = 'home' }: { page?: string }) {
     </>
   );
 }
-
