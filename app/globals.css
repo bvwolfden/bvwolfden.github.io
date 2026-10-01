@@ -112,3 +112,59 @@
   .rally-call i{font-size:13px}
   .tactical-mantra{font-size:24px}
 }
+
+/* Separate chapters keep the playbook easy to browse between shots. */
+.site-header{background:var(--navy);color:white;border-bottom:1px solid #29425f}
+.site-header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:20px}
+.site-links{display:flex;gap:6px;flex-wrap:wrap}
+.site-links a{padding:12px 10px;font-size:14px;font-weight:800;border-radius:3px}
+.site-links a[aria-current="page"]{background:var(--gold);color:var(--navy)}
+.site-links a:hover{background:#29425f;color:white}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.playbook-home .hero{min-height:0}
+.playbook-home .hero-content{padding-block:55px}
+.playbook-home .hero h1{font-size:clamp(48px,6vw,80px)}
+.chapter-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding-block:40px}
+.chapter-card{background:white;border:1px solid var(--line);border-top:4px solid var(--blue);padding:25px;transition:background .15s}
+.chapter-card:hover{background:var(--ice)}
+.chapter-card>span{color:var(--blue);font-size:14px;font-weight:900}
+.chapter-card h2{font-size:30px;margin:14px 0 10px}
+.chapter-card p{color:var(--muted);font-size:16px;margin:0}
+.chapter-heading{padding-top:28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.chapter-heading>a{font-size:14px;color:var(--blue);font-weight:800}
+.chapter-heading h1{font-size:clamp(32px,4vw,48px);margin-top:14px}
+.playbook-chapter .section{padding-block:48px}
+.course-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-top:24px}
+.course-directory a{display:grid;gap:8px;background:var(--navy);color:white;padding:22px;border:2px solid transparent}
+.course-directory a[aria-current="page"]{border-color:var(--gold)}
+.course-directory a:hover{background:var(--navy2)}
+.course-directory span{color:var(--gold);font-size:14px;font-weight:800}
+.course-directory strong{font:26px/1.2 var(--font-display);text-transform:uppercase}
+.course-directory small{font-size:14px;color:#c6d8eb}
+.course-index-intro{padding-block:48px}
+.course-index-intro h2{font-size:48px}
+.course-index-intro>p:last-child{max-width:650px;font-size:18px;color:var(--muted)}
+.course-jumps{display:flex;gap:12px;flex-wrap:wrap}
+.course-jumps a{padding:12px 20px;background:var(--blue);color:white;font-size:16px;font-weight:800}
+.playbook-chapter .course{margin-top:24px}
+.weapon[id],.playbook-chapter section[id]{scroll-margin-top:20px}
+.chapter-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px}
+.chapter-bottom a{padding:14px 18px;background:var(--navy);color:white;font-size:15px;font-weight:800}
+@media(max-width:1000px){.site-header-inner{align-items:flex-start;flex-direction:column;gap:16px}.chapter-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){
+  .site-header-inner{padding-block:16px;gap:14px}
+  .site-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;gap:4px}
+  .site-links a{padding:12px 4px;font-size:14px;line-height:1.3;text-align:center}
+  .playbook-home .hero-content{padding-block:32px}
+  .playbook-home .hero h1{font-size:48px}
+  .chapter-directory{grid-template-columns:1fr;padding-block:24px;gap:12px}
+  .chapter-card{padding:20px}
+  .chapter-heading{padding-block:22px}
+  .chapter-heading h1{font-size:32px}
+  .playbook-chapter .section{padding-block:32px}
+  .course-directory{grid-template-columns:1fr;gap:8px}
+  .course-directory a{padding:14px 18px;grid-template-columns:72px 1fr;align-items:center;gap:5px 12px}
+  .course-directory strong{font-size:23px}
+  .course-directory small{grid-column:2}
+  .chapter-bottom{display:grid;grid-template-columns:1fr;text-align:center}
+}
