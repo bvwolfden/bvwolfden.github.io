@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const links = [
   ['home', '/', 'Home'], ['history', '/history/', 'History'],
@@ -16,6 +16,23 @@ const legacyLinks: Record<string, string> = {
 };
 
 export default function SiteNavigation({ current }: { current: string }) {
+  const menu = useRef<HTMLDetailsElement>(null);
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && menu.current?.open) {
+        menu.current.open = false;
+        menu.current.querySelector('summary')?.focus();
+      }
+    };
+    const desktop = window.matchMedia('(min-width: 68rem)');
+    const closeOnDesktop = () => { if (desktop.matches && menu.current) menu.current.open = false; };
+    document.addEventListener('keydown', closeOnEscape);
+    desktop.addEventListener('change', closeOnDesktop);
+    return () => {
+      document.removeEventListener('keydown', closeOnEscape);
+      desktop.removeEventListener('change', closeOnDesktop);
+    };
+  }, []);
   useEffect(() => {
     if (current !== 'home') return;
     const followOldLink = () => {
@@ -27,11 +44,15 @@ export default function SiteNavigation({ current }: { current: string }) {
     return () => window.removeEventListener('hashchange', followOldLink);
   }, [current]);
 
-  return <header className="site-header">
+  const navigationLinks = links.map(([key, href, label]) => <a key={key} href={href} aria-current={current === key ? 'page' : undefined}>{label}</a>);
+  return <><a className="skip-link" href="#top">Skip to content</a><header className="site-header">
     <div className="shell site-header-inner">
       <a className="brand" href="/" aria-label="Blue Team home"><span className="brand-mark">B</span><span>BLUE TEAM / 2026</span></a>
-      <nav className="site-links" aria-label="Playbook navigation">{links.map(([key, href, label]) => <a key={key} href={href} aria-current={current === key ? 'page' : undefined}>{label}</a>)}</nav>
+      <nav className="site-links desktop-links" aria-label="Playbook navigation">{navigationLinks}</nav>
+      <details ref={menu} className="mobile-menu">
+        <summary>Menu <span aria-hidden="true">☰</span></summary>
+        <nav className="site-links" aria-label="Playbook navigation">{navigationLinks}</nav>
+      </details>
     </div>
-  </header>;
+  </header></>;
 }
-
