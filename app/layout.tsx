@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Manrope, Oswald } from 'next/font/google';
 import './globals.css';
+import './responsive.css';
 
 const body = Manrope({ variable: '--font-body', subsets: ['latin'] });
 const display = Oswald({ variable: '--font-display', subsets: ['latin'] });
